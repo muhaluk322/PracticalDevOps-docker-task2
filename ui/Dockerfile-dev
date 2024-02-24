@@ -1,0 +1,13 @@
+FROM node:16
+
+WORKDIR /usr/src/app/app-ui
+
+EXPOSE 4201
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+CMD ["npm", "start"]
